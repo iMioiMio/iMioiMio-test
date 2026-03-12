@@ -1,0 +1,18 @@
+backend:
+  name: github
+  repo: iMioiMio/iMioiMio-test   # 你的 GitHub 测试仓库名
+  branch: main                    # 或 master，看你的默认分支
+  auth_scope: repo
+
+media_folder: "assets"            # 上传图片存放目录
+public_folder: "/assets"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: ""                    # 根目录，存放 Markdown 文件
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
